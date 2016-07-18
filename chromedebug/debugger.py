@@ -317,7 +317,7 @@ def evaluate_on_frame(frame_id, expression, group=None, preview=False):
         if group:
             inspector.add_obj_to_group(obj, group)
         return {'result': inspector.encode(obj, preview=preview)}
-    except Exception, e:
+    except Exception as e:
         return {
             'result': inspector.encode(e),
             'wasThrown': True}
